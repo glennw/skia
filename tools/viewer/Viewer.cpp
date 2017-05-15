@@ -450,6 +450,7 @@ Viewer::Viewer(int argc, char** argv, void* platformData)
 void Viewer::initSlides() {
     fAllSlideNames = Json::Value(Json::arrayValue);
 
+/*
     const skiagm::GMRegistry* gms(skiagm::GMRegistry::Head());
     while (gms) {
         std::unique_ptr<skiagm::GM> gm(gms->factory()(nullptr));
@@ -478,6 +479,7 @@ void Viewer::initSlides() {
         }
         reg = reg->next();
     }
+*/
 
     // SKPs
     for (int i = 0; i < FLAGS_skps.count(); i++) {
@@ -508,6 +510,7 @@ void Viewer::initSlides() {
         }
     }
 
+/*
     // JPGs
     for (int i = 0; i < FLAGS_jpgs.count(); i++) {
         SkOSFile::Iter it(FLAGS_jpgs[i], ".jpg");
@@ -523,7 +526,7 @@ void Viewer::initSlides() {
                 fSlides.push_back(slide);
             }
         }
-    }
+    }*/
 }
 
 
